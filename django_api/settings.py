@@ -120,9 +120,26 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
+
+STATICFILES_DIRS = [
+    Path(BASE_DIR, 'static'),
+]
+
 STATIC_URL = '/static/'
+
+STATIC_ROOT = Path(BASE_DIR, 'static_cdn')
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# google recaptcha
+
+GOOGLE_API_KEY = "AIzaSyBjADxN2ImTsKQrihiTBTVGqddGJFS58x0"
+
+RECAPTCHA_KEY = "6Lfkp9sjAAAAAO0wdcgV4qGr1DMIcZbFHIUabqot"
+
+RECAPTCHA_SECRET_KEY = "6Lfkp9sjAAAAABcgMgwM7LoUcNpF2PTR0ljWyXZN"

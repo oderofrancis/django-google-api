@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'main',
-    'user',
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -143,3 +143,15 @@ GOOGLE_API_KEY = "AIzaSyBjADxN2ImTsKQrihiTBTVGqddGJFS58x0"
 RECAPTCHA_KEY = "6Lfkp9sjAAAAAO0wdcgV4qGr1DMIcZbFHIUabqot"
 
 RECAPTCHA_SECRET_KEY = "6Lfkp9sjAAAAABcgMgwM7LoUcNpF2PTR0ljWyXZN"
+
+# sign up and sign in logic
+
+LOGIN_URL = "users:sign-in"
+
+LOGIN_REDIRECT_URL = "main:account"
+
+LOGOUT_REDIRECT_URL = "users:sign-in"
+
+# BASE COUNTRY FOR SEARCHING
+
+BASE_COUNTRY = 'KE'

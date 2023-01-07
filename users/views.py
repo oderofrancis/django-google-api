@@ -12,7 +12,6 @@ from django_api.mixins import (
     AjaxFormMixin,
     reCAPTCHAValidation,
     FormErrors,
-    RedirectParams,
 )
 
 from .forms import (
@@ -139,4 +138,3 @@ def LogoutView(request):
     '''
     logout(request)
     return redirect(reverse('home'))
-    

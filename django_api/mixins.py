@@ -54,7 +54,7 @@ class AjaxFormMixin(object):
         response = super(AjaxFormMixin, self).form_invalid(form)
         if self.request.is_ajax():
             message = FormErrors(form)
-            return JsonResponse({'success': False, 'message': message}})
+            return JsonResponse({'success': False, 'message': message})
         return response
 
     def form_valid(self, form):
@@ -64,7 +64,7 @@ class AjaxFormMixin(object):
             return JsonResponse({'results': 'success', 'message': 'Form submitted successfully'})
         return response
 
-def Directions(**args.**kwargs):
+def Directions(**args):
     '''
     This function handles the directions between two locations from Google
     '''

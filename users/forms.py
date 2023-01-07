@@ -11,15 +11,15 @@ class UserForm(UserCreationForm):
     This form is used to create a new usern using built in user form
     '''
 
-    first_name = forms.CharField(max_length=100, required=True
+    first_name = forms.CharField(max_length=100, required=True,
         widget=forms.TextInput(attrs={'placeholder': 'First Name'}))  
-    last_name = forms.CharField(max_length=100, required=True
+    last_name = forms.CharField(max_length=100, required=True,
         widget=forms.TextInput(attrs={'placeholder': 'Last Name'}))
-    username = forms.CharField(max_length=100, required=True
+    username = forms.CharField(max_length=100, required=True,
         widget=forms.TextInput(attrs={'placeholder': 'Username'}))
-    password1 = forms.CharField(max_length=100, required=True
+    password1 = forms.CharField(max_length=100, required=True,
         widget=forms.PasswordInput(attrs={'placeholder': 'Password 1','class':'password'}))
-    password2 = forms.CharField(max_length=100, required=True
+    password2 = forms.CharField(max_length=100, required=True,
         widget=forms.PasswordInput(attrs={'placeholder': 'Password 2','class':'password'}))
 
     # captcha token
@@ -36,9 +36,9 @@ class AuthForm(AuthenticationForm):
     '''
     This form is used to authenticate a user
     '''
-    username = forms.CharField(max_length=100, required=True
+    username = forms.CharField(max_length=100, required=True,
         widget=forms.TextInput(attrs={'placeholder': 'Username'}))
-    password = forms.CharField(max_length=100, required=True
+    password = forms.CharField(max_length=100, required=True,
         widget=forms.PasswordInput(attrs={'placeholder': 'Password','class':'password'}))
 
     class Meta:

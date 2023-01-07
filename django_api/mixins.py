@@ -33,7 +33,7 @@ def get_captcha_score(token):
     )
     results = json.loads(results.text)
 
-def RedirectParams(**kwargs):
+def reCAPTCHAValidation(**kwargs):
     '''
     This function handles redirecting with parameters
     '''
